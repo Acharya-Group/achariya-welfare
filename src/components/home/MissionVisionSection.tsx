@@ -71,7 +71,7 @@ export default function MissionVisionSection() {
                   </h3>
                 </div>
                 <p className="text-gray-700 leading-relaxed mb-4 text-lg">
-                  Founded with a vision to empower every Indian citizen, we've been working tirelessly since 2010 to create lasting social impact across the nation.
+                  Founded with a vision to empower every Indian citizen, we've been working tirelessly since 2011 to create lasting social impact across the nation.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Our integrated approach combines grassroots initiatives with strategic partnerships, ensuring sustainable development in education, healthcare, environmental conservation, and economic empowerment.

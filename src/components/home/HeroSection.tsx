@@ -206,7 +206,7 @@ export default function HeroSection() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-center gap-4">
                         <p className="text-base text-center font-semibold text-black/80">
-                            <span className="text-amber-700">Achariya Welfare Trust</span> — Serving since 2010
+                            <span className="text-amber-700">Achariya Welfare Trust</span> — Serving since 2011
                         </p>
                     </div>
                 </div>
