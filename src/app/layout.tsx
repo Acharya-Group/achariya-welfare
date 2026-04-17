@@ -29,6 +29,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Achariya Welfare Trust' }],
   creator: 'Achariya Welfare Trust',
+
   openGraph: {
     type: 'website',
     locale: 'en_IN',
@@ -37,15 +38,33 @@ export const metadata: Metadata = {
     title: 'Achariya Welfare Trust | Empowering Communities Since Day One',
     description:
       'Join us in creating a better India through education, health, and sustainable development.',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Achariya Welfare Trust',
+      },
+    ],
   },
+
   twitter: {
     card: 'summary_large_image',
     title: 'Achariya Welfare Trust',
     description: 'Holistic development for the masses — Hisar, Haryana.',
+    images: ['/og-image.jpg'],
   },
-  robots: { index: true, follow: true },
-  viewport: 'width=device-width, initial-scale=1',
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  // ✅ Next.js 14+ recommended way (instead of viewport field)
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
 };
 
 export default function RootLayout({

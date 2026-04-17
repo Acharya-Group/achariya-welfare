@@ -92,7 +92,7 @@ export default function MissionVisionSection() {
             {/* Main image container */}
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               {/* Image with zoom effect */}
-              <img
+              <Image
                 height={400}
                 width={600}
                 src="/images/hero-1.jpg"
