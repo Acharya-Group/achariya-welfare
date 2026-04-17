@@ -35,7 +35,7 @@ const contactInfo = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-orange-50 via-white to-amber-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-[#fdf6ee] via-orange-50 to-amber-50">
       <div className="max-w-7xl mx-auto px-4">
 
         <AnimatedSection className="text-center mb-14">
