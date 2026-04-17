@@ -16,11 +16,12 @@ import BlogSection from '@/components/home/BlogSection';
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://your-domain.com'), 
+
   title: 'Achariya Welfare Trust | NGO Hisar Haryana | Empowering India',
   description:
     'Achariya Welfare Trust — registered NGO in Hisar, Haryana. Working in education, health, women empowerment, environment, and rural development across India.',
 };
-
 export default function HomePage() {
   return (
     <div className='overflow-hidden'>
