@@ -88,7 +88,7 @@ export default function Navbar() {
                   priority
                 />
               </div> */}
-              <div className="hidden sm:block">
+              <div>
                 <p className="text-sm lg:text-base font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent leading-tight">
                   Achariya Welfare Trust
                 </p>

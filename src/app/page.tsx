@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <>
+    <div className='overflow-hidden'>
       <HeroSection />
       <StatsSection />
       <MissionVisionSection />
@@ -37,6 +37,6 @@ export default function HomePage() {
       <BlogSection/>
       <ContactSection />
       <CTASection />
-    </>
+    </div>
   );
 }
