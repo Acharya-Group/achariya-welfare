@@ -92,7 +92,7 @@ export default function Navbar() {
                 <p className="text-sm lg:text-base font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent leading-tight">
                   Achariya Welfare Trust
                 </p>
-                <p className="text-[10px] lg:text-xs text-amber-600 font-semibold tracking-wide">Reg: 14794</p>
+                <p className="text-[10px] lg:text-xs text-amber-600 font-semibold tracking-wide">Reg. No. 14794 (since 2010)</p>
               </div>
             </Link>
 
