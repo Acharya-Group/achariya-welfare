@@ -1,0 +1,31 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[556],{6517:function(e,t,s){Promise.resolve().then(s.bind(s,1330))},8030:function(e,t,s){"use strict";s.d(t,{Z:function(){return l}});var r=s(2265);/**
+ * @license lucide-react v0.383.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */let n=e=>e.replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase(),a=function(){for(var e=arguments.length,t=Array(e),s=0;s<e;s++)t[s]=arguments[s];return t.filter((e,t,s)=>!!e&&s.indexOf(e)===t).join(" ")};/**
+ * @license lucide-react v0.383.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */var i={xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round"};/**
+ * @license lucide-react v0.383.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */let c=(0,r.forwardRef)((e,t)=>{let{color:s="currentColor",size:n=24,strokeWidth:c=2,absoluteStrokeWidth:l,className:o="",children:u,iconNode:d,...f}=e;return(0,r.createElement)("svg",{ref:t,...i,width:n,height:n,stroke:s,strokeWidth:l?24*Number(c)/Number(n):c,className:a("lucide",o),...f},[...d.map(e=>{let[t,s]=e;return(0,r.createElement)(t,s)}),...Array.isArray(u)?u:[u]])}),l=(e,t)=>{let s=(0,r.forwardRef)((s,i)=>{let{className:l,...o}=s;return(0,r.createElement)(c,{ref:i,iconNode:t,className:a("lucide-".concat(n(e)),l),...o})});return s.displayName="".concat(e),s}},2940:function(e,t,s){"use strict";s.d(t,{Z:function(){return r}});/**
+ * @license lucide-react v0.383.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */let r=(0,s(8030).Z)("CircleCheckBig",[["path",{d:"M22 11.08V12a10 10 0 1 1-5.93-9.14",key:"g774vq"}],["path",{d:"m9 11 3 3L22 4",key:"1pflzl"}]])},4042:function(e,t,s){"use strict";s.d(t,{Z:function(){return r}});/**
+ * @license lucide-react v0.383.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */let r=(0,s(8030).Z)("Heart",[["path",{d:"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z",key:"c3ymky"}]])},1005:function(e,t,s){"use strict";s.d(t,{Z:function(){return r}});/**
+ * @license lucide-react v0.383.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */let r=(0,s(8030).Z)("Home",[["path",{d:"m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z",key:"y5dka4"}],["polyline",{points:"9 22 9 12 15 12 15 22",key:"e2us08"}]])},7138:function(e,t,s){"use strict";s.d(t,{default:function(){return n.a}});var r=s(231),n=s.n(r)},6463:function(e,t,s){"use strict";var r=s(1169);s.o(r,"useSearchParams")&&s.d(t,{useSearchParams:function(){return r.useSearchParams}})},1330:function(e,t,s){"use strict";s.r(t),s.d(t,{default:function(){return d}});var r=s(7437),n=s(6463),a=s(7138),i=s(2940),c=s(1005),l=s(4042),o=s(2265);function u(){var e,t,s,o;let u=(0,n.useSearchParams)(),d=null!==(t=null!==(e=u.get("txnid"))&&void 0!==e?e:u.get("mihpayid"))&&void 0!==t?t:"—",f=null!==(s=u.get("amount"))&&void 0!==s?s:"—",m=null!==(o=u.get("status"))&&void 0!==o?o:"success";return(0,r.jsx)("div",{className:"min-h-screen bg-gradient-to-br from-[#fff8f0] via-[#fff3e8] to-[#fff9f0] flex items-center justify-center px-4",children:(0,r.jsxs)("div",{className:"max-w-md w-full bg-white rounded-3xl shadow-2xl border border-orange-100 p-10 text-center",children:[(0,r.jsx)("div",{className:"w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6",children:(0,r.jsx)(i.Z,{size:42,className:"text-green-500"})}),(0,r.jsx)("h1",{className:"font-display text-3xl font-bold text-gray-800 mb-2",children:"Thank You! \uD83D\uDE4F"}),(0,r.jsx)("p",{className:"font-hindi text-lg text-saffron mb-6",children:"आपका दान सफलतापूर्वक प्राप्त हुआ"}),(0,r.jsx)("p",{className:"text-gray-600 text-sm leading-relaxed mb-8",children:"Your generous donation has been received successfully. It will directly support our community programs across India."}),("—"!==d||"—"!==f)&&(0,r.jsxs)("div",{className:"bg-orange-50 border border-orange-100 rounded-2xl p-4 mb-8 text-left space-y-2",children:["—"!==f&&(0,r.jsxs)("div",{className:"flex justify-between text-sm",children:[(0,r.jsx)("span",{className:"text-gray-500",children:"Amount Donated"}),(0,r.jsxs)("span",{className:"font-bold text-crimson",children:["₹",Number(f).toLocaleString("en-IN")]})]}),"—"!==d&&(0,r.jsxs)("div",{className:"flex justify-between text-sm",children:[(0,r.jsx)("span",{className:"text-gray-500",children:"Transaction ID"}),(0,r.jsx)("span",{className:"font-mono text-xs text-gray-700",children:d})]}),(0,r.jsxs)("div",{className:"flex justify-between text-sm",children:[(0,r.jsx)("span",{className:"text-gray-500",children:"Status"}),(0,r.jsx)("span",{className:"text-green-600 font-semibold capitalize",children:m})]})]}),(0,r.jsx)("p",{className:"text-xs text-gray-400 mb-8",children:"\uD83D\uDCE7 Your 80G tax exemption receipt will be emailed within 7 working days. Keep your transaction ID for reference."}),(0,r.jsxs)("div",{className:"flex flex-col gap-3",children:[(0,r.jsxs)(a.default,{href:"/",className:"btn-primary flex items-center justify-center gap-2 py-3",children:[(0,r.jsx)(c.Z,{size:16})," Back to Home"]}),(0,r.jsxs)(a.default,{href:"/donate",className:"btn-outline flex items-center justify-center gap-2 py-3",children:[(0,r.jsx)(l.Z,{size:16})," Donate Again"]})]})]})})}function d(){return(0,r.jsx)(o.Suspense,{fallback:(0,r.jsx)("div",{className:"min-h-screen flex items-center justify-center",children:(0,r.jsx)("div",{className:"text-center text-gray-500",children:"Loading..."})}),children:(0,r.jsx)(u,{})})}}},function(e){e.O(0,[231,971,23,744],function(){return e(e.s=6517)}),_N_E=e.O()}]);
