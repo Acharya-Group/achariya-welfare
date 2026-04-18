@@ -14,7 +14,6 @@ module.exports = {
       
       },
       fontFamily: {
-        hindi: ['Noto Sans Devanagari', 'sans-serif'],
         display: ['Poppins', 'serif'],
         body: ['Poppins', 'sans-serif'],
       },

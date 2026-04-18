@@ -60,7 +60,6 @@ export const metadata: Metadata = {
     follow: true,
   },
 
-  // ✅ Next.js 14+ recommended way (instead of viewport field)
   viewport: {
     width: 'device-width',
     initialScale: 1,
@@ -74,7 +73,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body className="font-body bg-cream text-gray-900 overflow-x-hidden">
+      <body
+        className={`${poppins.className} font-body bg-cream text-gray-900 overflow-x-hidden antialiased`}
+      >
         <main>{children}</main>
         <Footer />
       </body>

@@ -16,7 +16,7 @@ import BlogSection from '@/components/home/BlogSection';
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://your-domain.com'), 
+  metadataBase: new URL('https://achariyawelfaretrust.org'), 
 
   title: 'Achariya Welfare Trust | NGO Hisar Haryana | Empowering India',
   description:
