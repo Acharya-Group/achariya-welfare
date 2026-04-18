@@ -48,11 +48,10 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-          scrolled
-            ? 'bg-white/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border-b border-white/20'
-            : 'bg-white/80 backdrop-blur-md'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${scrolled
+            ? 'bg-white backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border-b border-white/20'
+            : 'bg-white backdrop-blur-md'
+          }`}
       >
         {/* Animated gradient bar */}
         <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-rose-500 to-amber-500 animate-pulse" />
@@ -74,16 +73,16 @@ export default function Navbar() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo Area */}
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="group flex items-center gap-3 relative"
             >
-              <div className="relative max-w-[150px] mb-0 h-[50px] lg:w-auto lg:max-w-[unset] lg:h-[60px] lg:mb-4 transition-transform duration-500 group-hover:scale-105">
+              <div className="relative w-[140px] h-[50px]  md:w-[150px] md:h-[50px] lg:w-[180px] lg:h-[60px] xl:w-[200px] xl:h-[65px] mb-0">
                 <Image
-                  src="/demo.png"
+                  src="/images/welfare-logo.webp"
                   alt="Achariya Annapurna Logo"
-                  height={80} width={140}
-                  className="object-contain  w-auto relative z-10"
+                  fill
+                  className="object-contain"
                   priority
                 />
               </div>
@@ -101,7 +100,7 @@ export default function Navbar() {
                 const Icon = link.icon;
                 const isActive = hoveredLink === link.label;
                 const hasChildren = !!link.children;
-                
+
                 return (
                   <li
                     key={link.href}
@@ -121,29 +120,26 @@ export default function Navbar() {
                     >
                       {/* Hover background effect */}
                       <span className="absolute inset-0 bg-gradient-to-r from-rose-50 to-amber-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-                      
+
                       {/* Icon with animation */}
                       {Icon && (
-                        <Icon 
-                          size={16} 
-                          className={`relative z-10 transition-all duration-300 ${
-                            isActive ? 'text-[#7a0303] scale-110' : 'text-gray-500 group-hover:text-amber-600'
-                          }`} 
+                        <Icon
+                          size={16}
+                          className={`relative z-10 transition-all duration-300 ${isActive ? 'text-[#7a0303] scale-110' : 'text-gray-500 group-hover:text-amber-600'
+                            }`}
                         />
                       )}
-                      
-                      <span className={`relative z-10 transition-all duration-300 ${
-                        isActive ? 'text-[#7a0303]' : 'text-gray-700 group-hover:text-amber-600'
-                      }`}>
+
+                      <span className={`relative z-10 transition-all duration-300 ${isActive ? 'text-[#7a0303]' : 'text-gray-700 group-hover:text-amber-600'
+                        }`}>
                         {link.label}
                       </span>
-                      
+
                       {hasChildren && (
-                        <ChevronDown 
-                          size={14} 
-                          className={`relative z-10 transition-all duration-300 ${
-                            activeDropdown === link.label ? 'rotate-180 text-[#7a0303]' : 'text-gray-500 group-hover:text-amber-600'
-                          }`} 
+                        <ChevronDown
+                          size={14}
+                          className={`relative z-10 transition-all duration-300 ${activeDropdown === link.label ? 'rotate-180 text-[#7a0303]' : 'text-gray-500 group-hover:text-amber-600'
+                            }`}
                         />
                       )}
                     </Link>
@@ -178,19 +174,19 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               <Link
                 href="/donate"
-                className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-[#128af3] to-green text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-[#7a0303]-200/50 hover:shadow-xl hover:shadow-[#7a0303]-200/50 transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 group"
+                className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-blue to-green text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-[#7a0303]-200/50 hover:shadow-xl hover:shadow-[#7a0303]-200/50 transition-all duration-300 hover:-translate-y-1 hover:scale-110 group animate-pulse"
               >
-                <Heart size={16} className="group-hover:animate-pulse" />
+                <Heart size={16} className="group-hover:rotate-12 transition-transform duration-300" />
                 <span>Donate Now</span>
               </Link>
 
               {/* Mobile Menu Button */}
               <button
-                className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-r from-rose-50 to-amber-50 text-gray-700 hover:text-rose-600 transition-all duration-300 focus:outline-none"
+                className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-xl bg-blue text-white  transition-all duration-300 focus:outline-none"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label="Toggle menu"
               >
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 opacity-0 transition-opacity duration-300" />
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue to-green opacity-0 transition-opacity duration-300" />
                 {mobileMenuOpen ? (
                   <X size={22} className="relative z-10" />
                 ) : (
@@ -203,9 +199,8 @@ export default function Navbar() {
 
         {/* Mobile Menu - Full width sliding panel */}
         <div
-          className={`lg:hidden fixed inset-x-0 top-[calc(100%-2px)] bg-white/95 backdrop-blur-xl border-t border-rose-100 transition-all duration-500 ease-in-out z-40 ${
-            mobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
-          }`}
+          className={`lg:hidden fixed inset-x-0 top-[calc(100%-2px)] bg-white/95 backdrop-blur-xl border-t border-rose-100 transition-all duration-500 ease-in-out z-40 ${mobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
+            }`}
           style={{ maxHeight: 'calc(100vh - 80px)', overflowY: 'auto' }}
         >
           <div className="px-4 py-6 space-y-1">
@@ -213,7 +208,7 @@ export default function Navbar() {
               const Icon = link.icon;
               const hasChildren = !!link.children;
               const [isExpanded, setIsExpanded] = useState(false);
-              
+
               return (
                 <div key={link.href} className="animate-slideInRight" style={{ animationDelay: `${idx * 50}ms` }}>
                   {hasChildren ? (
@@ -223,11 +218,11 @@ export default function Navbar() {
                         className="w-full flex items-center justify-between py-3.5 px-4 rounded-xl text-gray-800 font-semibold hover:bg-gradient-to-r hover:from-rose-50 hover:to-amber-50 transition-all duration-300"
                       >
                         <div className="flex items-center gap-3">
-                          {Icon && <Icon size={18} className="text-amber-500" />}
+                          {Icon && <Icon size={18} className="text-green" />}
                           <span>{link.label}</span>
                         </div>
-                        <ChevronDown 
-                          size={18} 
+                        <ChevronDown
+                          size={18}
                           className={`transition-transform duration-300 ${isExpanded ? 'rotate-180 text-rose-500' : 'text-gray-400'}`}
                         />
                       </button>
@@ -237,7 +232,7 @@ export default function Navbar() {
                             <Link
                               key={child.href}
                               href={child.href}
-                              className="flex items-center gap-3 py-2.5 px-4 text-gray-600 hover:text-rose-600 transition-colors rounded-lg hover:bg-rose-50"
+                              className="flex items-center gap-3 py-2.5 px-4 text-gray-600 hover:text-primary transition-colors rounded-lg hover:bg-rose-50"
                               onClick={() => setMobileMenuOpen(false)}
                               style={{ animationDelay: `${childIdx * 30}ms` }}
                             >
@@ -254,18 +249,18 @@ export default function Navbar() {
                       className="flex items-center gap-3 py-3.5 px-4 rounded-xl text-gray-800 font-semibold hover:bg-gradient-to-r hover:from-rose-50 hover:to-amber-50 transition-all duration-300 group"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      {Icon && <Icon size={18} className="text-amber-500 group-hover:scale-110 transition-transform" />}
+                      {Icon && <Icon size={18} className="text-primary group-hover:scale-110 transition-transform" />}
                       <span>{link.label}</span>
                     </Link>
                   )}
                 </div>
               );
             })}
-            
+
             {/* Mobile Donate Button */}
             <Link
               href="/donate"
-              className="flex items-center justify-center gap-2 w-full mt-4 py-3.5 bg-gradient-to-r from-rose-500 to-amber-500 text-white rounded-xl font-bold shadow-lg shadow-rose-200/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+              className="flex items-center justify-center gap-2 w-full mt-4 py-3.5 bg-gradient-to-r from-blue to-green text-white rounded-xl font-bold shadow-lg shadow-rose-200/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
               onClick={() => setMobileMenuOpen(false)}
             >
               <Heart size={18} className="animate-pulse" />
