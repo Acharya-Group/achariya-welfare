@@ -119,7 +119,7 @@ export default function HeroSection() {
 
                             {/* Description */}
                             <p className="text-white text-base leading-relaxed max-w-lg">
-                                <strong className="text-primary bg-white px-1 rounded">Achariya Welfare Trust</strong> provides food, education, healthcare, and hope to underserved communities across Haryana. Join us in ending hunger and building a brighter India.
+                                <strong className="text-blue bg-white px-1 rounded">Achariya Welfare Trust</strong> provides food, education, healthcare, and hope to underserved communities across Haryana. Join us in ending hunger and building a brighter India.
                             </p>
 
                             {/* CTA Buttons */}
