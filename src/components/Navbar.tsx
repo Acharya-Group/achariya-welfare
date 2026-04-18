@@ -57,7 +57,7 @@ export default function Navbar() {
         <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-rose-500 to-amber-500 animate-pulse" />
 
         {/* Top ribbon - animated */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-blue to-primary text-white text-xs py-2.5 px-4 text-center font-medium tracking-wide">
+        <div className="relative overflow-hidden bg-blue text-white text-xs py-2.5 px-4 text-center font-medium tracking-wide">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
           <div className="relative flex items-center justify-center gap-2 flex-wrap">
             <Sparkles size={14} className="text-yellow-300 animate-pulse" />
@@ -174,7 +174,7 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               <Link
                 href="/donate"
-                className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-blue to-green text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-[#7a0303]-200/50 hover:shadow-xl hover:shadow-[#7a0303]-200/50 transition-all duration-300 hover:-translate-y-1 hover:scale-110 group animate-pulse"
+                className="hidden lg:flex items-center gap-2 bg-blue text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-[#7a0303]-200/50 hover:shadow-xl hover:shadow-[#7a0303]-200/50 transition-all duration-300 hover:bg-primary group animate-pulse"
               >
                 <Heart size={16} className="group-hover:rotate-12 transition-transform duration-300" />
                 <span>Donate Now</span>
@@ -260,7 +260,7 @@ export default function Navbar() {
             {/* Mobile Donate Button */}
             <Link
               href="/donate"
-              className="flex items-center justify-center gap-2 w-full mt-4 py-3.5 bg-gradient-to-r from-blue to-green text-white rounded-xl font-bold shadow-lg shadow-rose-200/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+              className="flex items-center justify-center gap-2 w-full mt-4 py-3.5 bg-blue text-white rounded-xl font-bold shadow-lg shadow-rose-200/50 hover:shadow-xl transition-all duration-300 hover:bg-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
               <Heart size={18} className="animate-pulse" />

@@ -2,12 +2,13 @@
 // components/home/StatsSection.tsx
 import { useEffect, useRef, useState } from 'react';
 import { Award, Users, Globe, MapPin } from 'lucide-react';
+import SubHeading from '../common/SubHeading';
 
 const stats = [
-  { value: 15,    suffix: '+', label: 'Years of Service',  sub: 'Serving since 2009',      icon: Award  },
-  { value: 5000, suffix: '+', label: 'Lives Impacted',    sub: 'Across rural India',      icon: Users  },
-  { value: 100,   suffix: '+', label: 'Programs Run',      sub: 'Education to healthcare', icon: Globe  },
-  { value: 20,    suffix: '+', label: 'Districts Reached', sub: 'Hisar and beyond',        icon: MapPin },
+  { value: 15, suffix: '+', label: 'Years of Service', sub: 'Serving since 2009', icon: Award },
+  { value: 5000, suffix: '+', label: 'Lives Impacted', sub: 'Across rural India', icon: Users },
+  { value: 100, suffix: '+', label: 'Programs Run', sub: 'Education to healthcare', icon: Globe },
+  { value: 20, suffix: '+', label: 'Districts Reached', sub: 'Hisar and beyond', icon: MapPin },
 ];
 
 function easeOutQuart(t: number) {
@@ -91,9 +92,9 @@ export default function StatsSection() {
           <p className="text-saffron text-xs font-semibold tracking-[0.2em] uppercase mb-2">
             Our Impact
           </p>
-           <h2 className="font-display text-4xl font-bold mt-2 mb-4">
+          <SubHeading>
             15 Years of &amp; <span className="gradient-text">Serving India</span>
-          </h2>
+          </SubHeading>
           <p className="text-gray-500 text-base mt-3 max-w-xl mx-auto leading-relaxed">
             From a single district to a nationwide movement — every number represents a life touched.
           </p>

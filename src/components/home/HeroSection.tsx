@@ -126,17 +126,17 @@ export default function HeroSection() {
                             <div className="flex flex-wrap gap-4 pt-4">
                                 <Link
                                     href="/donate"
-                                    className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+                                    className="inline-flex items-center gap-2 px-8 py-3 bg-blue hover:bg-primary text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
                                 >
                                     <Heart size={18} />
                                     Donate Now
                                 </Link>
                                 <Link
                                     href="/about"
-                                    className="inline-flex items-center gap-2 px-8 py-3 bg-white text-gray-700 rounded-full font-semibold border border-gray-200 hover:border-amber-300 hover:shadow-md transition-all duration-300"
+                                    className="inline-flex group items-center gap-2 px-8 py-3 bg-white text-gray-700 rounded-full font-semibold border border-gray-200 hover:border-amber-300 hover:shadow-md transition-all duration-300"
                                 >
                                     Learn More
-                                    <ArrowRight size={16} />
+                                    <ArrowRight className='group-hover:translate-x-3 transition-all duration-300' size={16} />
                                 </Link>
                             </div>
                         </div>
