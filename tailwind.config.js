@@ -8,12 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        saffron: '#FF6B00',
-        crimson: '#A81C1C',
-        gold: '#D4A017',
-        deepred: '#8B0000',
-        cream: '#FFF8F0',
-        forest: '#2D5016',
+        primary: '#7a0303',
+        green: '#41a032',
+        blue: '#128af3',
+      
       },
       fontFamily: {
         hindi: ['Noto Sans Devanagari', 'sans-serif'],

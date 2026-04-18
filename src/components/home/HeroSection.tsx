@@ -112,14 +112,14 @@ export default function HeroSection() {
                             {/* Heading */}
                             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.2] tracking-tight">
                                 <span className="text-white">We Serve</span>
-                                <span className="block bg-gradient-to-r from-amber-600 via-orange-600 to-rose-600 bg-clip-text text-transparent">
+                                <span className="block bg-gradient-to-r from-[#128af3] to-white bg-clip-text text-transparent">
                                     With Compassion
                                 </span>
                             </h1>
 
                             {/* Description */}
                             <p className="text-white text-base leading-relaxed max-w-lg">
-                                <strong className="text-amber-500">Achariya Welfare Trust</strong> provides food, education, healthcare, and hope to underserved communities across Haryana. Join us in ending hunger and building a brighter India.
+                                <strong className="text-primary bg-white px-1 rounded">Achariya Welfare Trust</strong> provides food, education, healthcare, and hope to underserved communities across Haryana. Join us in ending hunger and building a brighter India.
                             </p>
 
                             {/* CTA Buttons */}

@@ -58,7 +58,7 @@ export default function Navbar() {
         <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-rose-500 to-amber-500 animate-pulse" />
 
         {/* Top ribbon - animated */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-rose-600 via-amber-600 to-rose-600 text-white text-xs py-2.5 px-4 text-center font-medium tracking-wide">
+        <div className="relative overflow-hidden bg-gradient-to-r from-blue to-primary text-white text-xs py-2.5 px-4 text-center font-medium tracking-wide">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
           <div className="relative flex items-center justify-center gap-2 flex-wrap">
             <Sparkles size={14} className="text-yellow-300 animate-pulse" />
@@ -78,22 +78,21 @@ export default function Navbar() {
               href="/" 
               className="group flex items-center gap-3 relative"
             >
-              {/* <div className="relative w-[80px] h-[50px] lg:w-[120px] lg:h-[80px] transition-transform duration-500 group-hover:scale-105">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-rose-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
+              <div className="relative max-w-[150px] mb-0 h-[50px] lg:w-auto lg:max-w-[unset] lg:h-[60px] lg:mb-4 transition-transform duration-500 group-hover:scale-105">
                 <Image
-                  src="/logo.png"
+                  src="/demo.png"
                   alt="Achariya Annapurna Logo"
-                  fill
-                  className="object-contain relative z-10"
+                  height={80} width={140}
+                  className="object-contain  w-auto relative z-10"
                   priority
                 />
-              </div> */}
-              <div>
+              </div>
+              {/* <div>
                 <p className="text-sm lg:text-base font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent leading-tight">
                   Achariya Welfare Trust
                 </p>
                 <p className="text-[10px] lg:text-xs text-amber-600 font-semibold tracking-wide">Reg. No. 14794 (Since 2011)</p>
-              </div>
+              </div> */}
             </Link>
 
             {/* Desktop Navigation */}
@@ -128,13 +127,13 @@ export default function Navbar() {
                         <Icon 
                           size={16} 
                           className={`relative z-10 transition-all duration-300 ${
-                            isActive ? 'text-rose-500 scale-110' : 'text-gray-500 group-hover:text-amber-600'
+                            isActive ? 'text-[#7a0303] scale-110' : 'text-gray-500 group-hover:text-amber-600'
                           }`} 
                         />
                       )}
                       
                       <span className={`relative z-10 transition-all duration-300 ${
-                        isActive ? 'text-rose-600' : 'text-gray-700 group-hover:text-amber-600'
+                        isActive ? 'text-[#7a0303]' : 'text-gray-700 group-hover:text-amber-600'
                       }`}>
                         {link.label}
                       </span>
@@ -143,7 +142,7 @@ export default function Navbar() {
                         <ChevronDown 
                           size={14} 
                           className={`relative z-10 transition-all duration-300 ${
-                            activeDropdown === link.label ? 'rotate-180 text-rose-500' : 'text-gray-500 group-hover:text-amber-600'
+                            activeDropdown === link.label ? 'rotate-180 text-[#7a0303]' : 'text-gray-500 group-hover:text-amber-600'
                           }`} 
                         />
                       )}
@@ -159,10 +158,10 @@ export default function Navbar() {
                               <Link
                                 key={child.href}
                                 href={child.href}
-                                className="flex items-center gap-3 px-5 py-3.5 text-sm text-gray-700 hover:text-rose-600 transition-all duration-300 border-b border-rose-50 last:border-none group hover:bg-white/50"
+                                className="flex items-center gap-3 px-5 py-3.5 text-sm text-gray-700 hover:text-[#7a0303] transition-all duration-300 border-b border-rose-50 last:border-none group hover:bg-white/50"
                                 style={{ animationDelay: `${idx * 50}ms` }}
                               >
-                                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 group-hover:bg-rose-500 transition-all duration-300 group-hover:scale-150" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 group-hover:bg-[#7a0303] transition-all duration-300 group-hover:scale-150" />
                                 <span className="font-medium">{child.label}</span>
                               </Link>
                             ))}
@@ -179,7 +178,7 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               <Link
                 href="/donate"
-                className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-rose-500 to-amber-500 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-rose-200/50 hover:shadow-xl hover:shadow-amber-200/50 transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 group"
+                className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-[#128af3] to-green text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-[#7a0303]-200/50 hover:shadow-xl hover:shadow-[#7a0303]-200/50 transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 group"
               >
                 <Heart size={16} className="group-hover:animate-pulse" />
                 <span>Donate Now</span>
