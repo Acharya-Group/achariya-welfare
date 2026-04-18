@@ -112,7 +112,7 @@ export default function HeroSection() {
                             {/* Heading */}
                             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.2] tracking-tight">
                                 <span className="text-white">We Serve</span>
-                                <span className="block bg-gradient-to-r from-[#128af3] to-white bg-clip-text text-transparent">
+                                <span className="block bg-primary bg-clip-text text-transparent">
                                     With Compassion
                                 </span>
                             </h1>
