@@ -112,7 +112,7 @@ export default function HeroSection() {
                             {/* Heading */}
                             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.2] tracking-tight">
                                 <span className="text-white">We Serve</span>
-                                <span className="block text-primary drop-shadow-[0_0_12px_rgba(255,255,255,0.9)]">
+                                <span className="block text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)]">
                                     With Compassion
                                 </span>
                             </h1>

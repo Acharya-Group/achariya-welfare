@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { Heart, Shield, CheckCircle, Smartphone, Loader2, AlertCircle, IndianRupee, Sparkles, ArrowRight, Building2, Landmark, Clock } from 'lucide-react';
 import AnimatedSection from '@/components/AnimatedSection';
 import Para from '../common/Para';
+import SubHeading from '../common/SubHeading';
+import CommonButton from '../common/CommonButton';
 
 // ─── PayU Configuration ───────────────────────────────────────────────────────
 const PAYU_CONFIG = {
@@ -120,12 +122,13 @@ export default function DonateSection() {
         {/* Header */}
         <AnimatedSection className="text-center mb-12">
           <span className="text-saffron font-semibold text-sm uppercase tracking-widest">Support Us</span>
-          <h2 className="font-display text-4xl font-bold mt-2 mb-3">
+          {/* <h2 className="font-display text-4xl font-bold mt-2 mb-3">
             Make a <span className="gradient-text">Donation</span>
-          </h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
-            Every rupee you give directly funds education, healthcare, and livelihoods.
-          </p>
+          </h2> */}
+          <SubHeading>
+            Your Contribution Matters
+          </SubHeading>
+
           <Para children="Your support makes a real difference in the lives of those who need it most." />
 
           {/* Trust Badges */}
@@ -136,7 +139,7 @@ export default function DonateSection() {
               { icon: Heart, label: 'FCRA Compliant' },
             ].map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-2 bg-white rounded-full px-4 py-1.5 text-sm shadow-sm">
-                <Icon size={14} className="text-orange-500" />
+                <Icon size={14} className="text-green-500" />
                 <span className="text-gray-600">{label}</span>
               </div>
             ))}
@@ -162,8 +165,8 @@ export default function DonateSection() {
                         setAmountError('');
                       }}
                       className={`py-3 rounded-xl font-bold text-sm transition-all ${selectedAmount === amt
-                          ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg scale-105'
-                          : 'bg-orange-50 border border-orange-200 text-gray-700 hover:border-orange-300'
+                        ? 'bg-primary text-white shadow-lg scale-105'
+                        : 'bg-orange-50 border border-orange-200 text-gray-700 hover:border-orange-300'
                         }`}
                     >
                       ₹{amt.toLocaleString('en-IN')}
@@ -210,7 +213,7 @@ export default function DonateSection() {
                 <button
                   onClick={handleDonate}
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all hover:shadow-lg hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full bg-blue text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all hover:shadow-lg hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {loading ? (
                     <>
@@ -248,7 +251,7 @@ export default function DonateSection() {
               <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-6 border border-orange-100 flex-1">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="font-display text-lg font-bold text-gray-800">Your Donation Impact</h3>
-                  <Clock size={16} className="text-orange-400" />
+                  <Clock size={16} className="text-primary" />
                 </div>
                 <p className="text-xs text-gray-500 mb-4">Click any amount to see impact</p>
                 <div className="space-y-2 max-h-[280px] overflow-y-auto pr-1 custom-scrollbar">
@@ -260,12 +263,12 @@ export default function DonateSection() {
                         setCustomAmount('');
                         setAmountError('');
                       }}
-                      className={`w-full flex items-start gap-3 text-left rounded-xl p-3 transition-all ${selectedAmount === Number(amt)
-                          ? 'bg-white shadow-md ring-1 ring-orange-300'
-                          : 'hover:bg-white/70'
+                      className={`w-full flex items-start gap-3 text-left rounded-xl p-2 transition-all ${selectedAmount === Number(amt)
+                        ? 'bg-white shadow-md ring-1 ring-orange-300'
+                        : 'hover:bg-white/70'
                         }`}
                     >
-                      <span className={`text-white text-xs font-bold px-2.5 py-1 rounded-lg shrink-0 ${selectedAmount === Number(amt) ? 'bg-red-500' : 'bg-orange-500'
+                      <span className={`text-white text-xs font-bold px-1 py-1 rounded-lg shrink-0 ${selectedAmount === Number(amt) ? 'bg-blue' : 'bg-primary'
                         }`}>
                         ₹{Number(amt).toLocaleString('en-IN')}
                       </span>
@@ -346,11 +349,13 @@ export default function DonateSection() {
             </div>
           </AnimatedSection>
         </div>
-         <AnimatedSection className="text-center mt-10">
-          <Link href="/activities" className="btn-primary !inline-flex items-center gap-2">
-           View Full Donation Page <ArrowRight size={16} />
-          </Link>
-            <p className="text-gray-400 text-xs mt-3">
+        <AnimatedSection className="text-center mt-10">
+
+
+          <CommonButton href="/activities">
+            View Full Donation Page
+          </CommonButton>
+          <p className="text-gray-400 text-xs mt-3">
             80G & 12A certified · All payments secured · Instant receipt
           </p>
         </AnimatedSection>
@@ -365,7 +370,7 @@ export default function DonateSection() {
           border-radius: 4px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #f97316;
+          background: #4553cf;
           border-radius: 4px;
         }
       `}</style>
