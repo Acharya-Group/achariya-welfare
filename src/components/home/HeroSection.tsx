@@ -112,14 +112,14 @@ export default function HeroSection() {
                             {/* Heading */}
                             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.2] tracking-tight">
                                 <span className="text-white">We Serve</span>
-                                <span className="block bg-primary bg-clip-text text-transparent">
+                                <span className="block text-primary drop-shadow-[0_0_12px_rgba(255,255,255,0.9)]">
                                     With Compassion
                                 </span>
                             </h1>
 
                             {/* Description */}
                             <p className="text-white text-base leading-relaxed max-w-lg">
-                                <strong className="text-blue bg-white px-1 rounded">Achariya Welfare Trust</strong> provides food, education, healthcare, and hope to underserved communities across Haryana. Join us in ending hunger and building a brighter India.
+                                <strong className="text-blue bg-white px-1 rounded">Achariya Welfare Trust</strong> provide food, education, healthcare, and hope to underserved communities across Haryana. Join us in ending hunger and building a brighter India.
                             </p>
 
                             {/* CTA Buttons */}
@@ -168,8 +168,8 @@ export default function HeroSection() {
                                                 key={idx}
                                                 onClick={() => setCurrentSlide(idx)}
                                                 className={`h-1.5 rounded-full transition-all duration-300 ${currentSlide === idx
-                                                        ? 'w-8 bg-white'
-                                                        : 'w-1.5 bg-white/50 hover:bg-white/80'
+                                                    ? 'w-8 bg-white'
+                                                    : 'w-1.5 bg-white/50 hover:bg-white/80'
                                                     }`}
                                             />
                                         ))}
@@ -189,7 +189,7 @@ export default function HeroSection() {
                             </div>
                             <div className="absolute -top-5 -right-5 border  border-amber-100">
                                 <Image height={50}
-                                width={100}
+                                    width={100}
                                     src="/logo.png"
                                     alt="Achariya Annapurna Logo"
                                     className="object-contain relative z-10"

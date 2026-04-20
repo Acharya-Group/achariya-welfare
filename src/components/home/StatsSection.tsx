@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Award, Users, Globe, MapPin } from 'lucide-react';
 import SubHeading from '../common/SubHeading';
+import Para from '../common/Para';
 
 const stats = [
   { value: 15, suffix: '+', label: 'Years of Service', sub: 'Serving since 2009', icon: Award },
@@ -54,7 +55,7 @@ function StatCard({
       </div>
 
       {/* Animated number */}
-      <p className="font-display text-3xl sm:text-5xl font-bold text-crimson leading-none tabular-nums">
+      <p className="font-display text-3xl sm:text-5xl font-bold text-primary leading-none tabular-nums">
         {formatted}
         <span className="text-gold">{suffix}</span>
       </p>
@@ -84,7 +85,7 @@ export default function StatsSection() {
   }, []);
 
   return (
-    <section ref={ref} className="bg-[#fff8f0] py-16 sm:py-20">
+    <section ref={ref} className="bg-primary/5 py-16 sm:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
 
         {/* Heading */}
@@ -93,11 +94,10 @@ export default function StatsSection() {
             Our Impact
           </p>
           <SubHeading>
-            15 Years of &amp; <span className="gradient-text">Serving India</span>
+            15 Years of Serving India
           </SubHeading>
-          <p className="text-gray-500 text-base mt-3 max-w-xl mx-auto leading-relaxed">
-            From a single district to a nationwide movement — every number represents a life touched.
-          </p>
+            <Para children="From a single district to a nationwide movement — every number represents a life touched." />
+           
         </div>
 
         {/* 4-col responsive grid */}

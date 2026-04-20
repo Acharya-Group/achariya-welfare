@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Heart, Shield, CheckCircle, Smartphone, Loader2, AlertCircle, IndianRupee, Sparkles, ArrowRight, Building2, Landmark, Clock } from 'lucide-react';
 import AnimatedSection from '@/components/AnimatedSection';
+import Para from '../common/Para';
 
 // ─── PayU Configuration ───────────────────────────────────────────────────────
 const PAYU_CONFIG = {
@@ -108,7 +109,7 @@ export default function DonateSection() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#fdf6ee] via-orange-50 to-amber-50 relative overflow-hidden">
+    <section className="py-20 bg-primary/5 relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-10 w-72 h-72 bg-orange-200 rounded-full blur-3xl" />
@@ -125,6 +126,7 @@ export default function DonateSection() {
           <p className="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
             Every rupee you give directly funds education, healthcare, and livelihoods.
           </p>
+          <Para children="Your support makes a real difference in the lives of those who need it most." />
 
           {/* Trust Badges */}
           <div className="flex flex-wrap justify-center gap-3 mt-6">

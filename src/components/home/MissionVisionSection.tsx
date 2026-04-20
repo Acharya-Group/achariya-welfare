@@ -1,6 +1,8 @@
 // components/home/MissionVisionSection.tsx
 import AnimatedSection from '@/components/AnimatedSection';
 import Image from 'next/image';
+import SubHeading from '../common/SubHeading';
+import Para from '../common/Para';
 
 const trustedPartners = [
   { name: 'Google', logo: 'https://via.placeholder.com/80x80?text=Google', delay: 0 },
@@ -47,14 +49,11 @@ export default function MissionVisionSection() {
           <p className="text-saffron text-xs font-semibold tracking-[0.2em] uppercase mb-2">
             Who We Are
           </p>
-          <h2 className="font-display text-4xl font-bold mt-2 mb-4">
-            Our Mission &amp; <span className="gradient-text">Our Vision</span>
-          </h2>
-          <p className="text-gray-500 text-base mt-3 max-w-xl mx-auto leading-relaxed">
-            From a single district to a nationwide movement — every number represents a life touched.
-          </p>
+          <SubHeading>
+            Our Mission &amp; Vision
+          </SubHeading>
+          <Para children="From a single district to a nationwide movement — every number represents a life touched." />
         </div>
-
         {/* About Us & Trusted Partners Row */}
         <div className="grid lg:grid-cols-2 gap-12 mb-20 items-center">
           {/* Left Side - About Us */}

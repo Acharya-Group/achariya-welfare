@@ -2,6 +2,9 @@
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import AnimatedSection from '../AnimatedSection';
+import Para from '../common/Para';
+import SubHeading from '../common/SubHeading';
+import CommonButton from '../common/CommonButton';
 
 const cases = [
   {
@@ -42,15 +45,14 @@ export default function SuccessCasesSection() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4">
-    <AnimatedSection className="text-center mb-14">
-  <span className="text-saffron font-semibold text-sm uppercase tracking-widest">Inspiring Journeys</span>
-  <h2 className="font-display text-4xl font-bold mt-2 mb-3">
-    Real <span className="gradient-text">Success Stories</span>
-  </h2>
-  <p className="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
-    From dreams to reality — hear from those whose lives have been transformed through our collective efforts.
-  </p>
-</AnimatedSection>
+        <AnimatedSection className="text-center mb-14">
+          <span className="text-saffron font-semibold text-sm uppercase tracking-widest">Inspiring Journeys</span>
+
+          <SubHeading>
+            Real Success Stories
+          </SubHeading>
+          <Para children="From dreams to reality — hear from those whose lives have been transformed through our collective efforts." />
+        </AnimatedSection>
         {/* Timeline */}
         <div className="space-y-6">
           {cases.map((caseItem, idx) => (
@@ -81,10 +83,10 @@ export default function SuccessCasesSection() {
             </div>
           ))}
         </div>
-          <AnimatedSection className="text-center mt-10">
-          <Link href="/activities" className="btn-primary !inline-flex items-center gap-2">
-           See all impact stories <ArrowRight size={16} />
-          </Link>
+        <AnimatedSection className="text-center mt-10">
+            <CommonButton href="/activities">
+            See all impact stories
+          </CommonButton>
         </AnimatedSection>
       </div>
     </section>
