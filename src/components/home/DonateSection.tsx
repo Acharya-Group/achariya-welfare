@@ -1,7 +1,6 @@
 // components/home/DonateSection.tsx
 'use client';
 import { useState } from 'react';
-import Link from 'next/link';
 import { Heart, Shield, CheckCircle, Smartphone, Loader2, AlertCircle, IndianRupee, Sparkles, ArrowRight, Building2, Landmark, Clock } from 'lucide-react';
 import AnimatedSection from '@/components/AnimatedSection';
 import Para from '../common/Para';
