@@ -8,6 +8,8 @@ import { Navigation, Pagination, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Para from '../common/Para';
+import SubHeading from '../common/SubHeading';
 
 const reviews = [
   {
@@ -59,16 +61,15 @@ export default function TestimonialsSection() {
 
         {/* Header */}
         <AnimatedSection className="text-center mb-12">
-          <span className="text-orange-600 font-semibold text-xs uppercase tracking-widest">
-            Testimonials
-          </span>
-          <h2 className="font-display text-4xl font-bold mt-2 mb-3">
-            What people{' '}
-            <span className="text-orange-500">say</span>
-          </h2>
-          <p className="text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
-            Real stories from our community
-          </p>
+
+          <span className="text-saffron font-semibold text-sm uppercase tracking-widest">Testimonials</span>
+
+          <SubHeading>
+            What people Say
+          </SubHeading>
+
+          <Para children="Real stories from our community" />
+
         </AnimatedSection>
 
         {/* Swiper Slider */}
@@ -112,7 +113,7 @@ export default function TestimonialsSection() {
 
                   {/* Footer */}
                   <div className="flex justify-between items-center pt-3 border-t border-gray-100">
-                  
+
                     <span className="text-[10px] font-medium bg-orange-50 text-orange-600 px-2.5 py-1 rounded-full whitespace-nowrap">
                       {review.name}
                     </span>

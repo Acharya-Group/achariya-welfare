@@ -2,6 +2,8 @@
 'use client';
 import { CheckCircle, Shield, Award, BadgeCheck, Trophy, Sparkles, Building2, Globe } from 'lucide-react';
 import AnimatedSection from '@/components/AnimatedSection';
+import Para from '../common/Para';
+import SubHeading from '../common/SubHeading';
 
 const achievements = [
   { text: 'Registered under Indian Trusts Act', icon: '📜', lightBg: 'bg-orange-50', textColor: 'text-orange-700', highlight: false },
@@ -37,16 +39,11 @@ export default function AchievementsSection() {
 
         <AnimatedSection className="text-center mb-14">
           <span className="text-saffron font-semibold text-sm uppercase tracking-widest">Recognised & Trusted</span>
-          <h2 className="font-display text-4xl font-bold mt-2 mb-3">
-            Our <span className="gradient-text">Achievements</span>
-          </h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
-            Certifications, partnerships, and recognitions that validate our commitment to transparency and impact.
-
-          </p>
+          <SubHeading>
+            Our Achievements
+          </SubHeading>
+          <Para children="Your support makes a real difference in the lives of those who need it most." />
         </AnimatedSection>
-
-
         {/* Achievements Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           {achievements.map((item, i) => (
@@ -55,7 +52,7 @@ export default function AchievementsSection() {
                 {/* Badge */}
                 {item.badge && (
                   <div className="absolute -top-2 -right-2">
-                    <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full shadow-sm">
+                    <div className="bg-primary text-white text-xs font-bold px-2 py-0.5 rounded-full shadow-sm">
                       {item.badge}
                     </div>
                   </div>
@@ -68,7 +65,7 @@ export default function AchievementsSection() {
                   <div className="flex-1">
                     <p className="text-gray-700 text-sm leading-relaxed">{item.text}</p>
                   </div>
-                  <CheckCircle size={16} className="text-orange-500 shrink-0 mt-1" />
+                  <CheckCircle size={16} className="text-primary shrink-0 mt-1" />
                 </div>
               </div>
             </AnimatedSection>
@@ -98,8 +95,8 @@ export default function AchievementsSection() {
         <AnimatedSection className="mt-12 text-center">
           <div className="bg-gradient-to-r from-orange-50 via-amber-50 to-rose-50 rounded-2xl p-5 border border-orange-100">
             <div className="flex items-center justify-center gap-2 mb-2">
-              <Sparkles className="w-4 h-4 text-orange-500" />
-              <p className="text-orange-600 font-semibold text-sm">Your Trust Matters</p>
+              <Sparkles className="w-4 h-4 text-primary" />
+              <p className="text-primary font-semibold text-sm">Your Trust Matters</p>
             </div>
             <p className="text-gray-600 text-xs max-w-2xl mx-auto">
               We are committed to complete transparency in all our operations. Our financial records,

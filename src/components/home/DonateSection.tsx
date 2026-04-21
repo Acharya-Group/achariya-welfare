@@ -121,9 +121,7 @@ export default function DonateSection() {
         {/* Header */}
         <AnimatedSection className="text-center mb-12">
           <span className="text-saffron font-semibold text-sm uppercase tracking-widest">Support Us</span>
-          {/* <h2 className="font-display text-4xl font-bold mt-2 mb-3">
-            Make a <span className="gradient-text">Donation</span>
-          </h2> */}
+        
           <SubHeading>
             Your Contribution Matters
           </SubHeading>

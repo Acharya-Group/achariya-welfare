@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { ChevronDown, HelpCircle, Mail, Phone, MapPin, Clock, MessageCircle, Heart, Shield, CheckCircle, Sparkles } from 'lucide-react';
 import AnimatedSection from '@/components/AnimatedSection';
+import Para from '../common/Para';
+import SubHeading from '../common/SubHeading';
 
 const faqs = [
     {
@@ -98,15 +100,11 @@ export default function FAQSection() {
 
                 <AnimatedSection className="text-center mb-14">
                     <span className="text-saffron font-semibold text-sm uppercase tracking-widest">FAQs</span>
-                    <h2 className="font-display text-4xl font-bold mt-2 mb-3">
-                        Frequently Asked <span className="gradient-text">Questions</span>
-                    </h2>
-                    <p className="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
-                        Find answers to common questions about donations, volunteering, partnerships, and our work.
-
-                    </p>
+                    <SubHeading>
+                        Frequently Asked Questions
+                    </SubHeading>
+                    <Para children="Find answers to common questions about donations, volunteering, partnerships, and our work." />
                 </AnimatedSection>
-
                 {/* Category Filters */}
                 <AnimatedSection className="mb-10">
                     <div className="flex flex-wrap justify-center gap-2">
@@ -115,7 +113,7 @@ export default function FAQSection() {
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
                                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeCategory === category
-                                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-md'
+                                    ? 'bg-primary text-white shadow-md'
                                     : 'bg-white border border-orange-200 text-gray-600 hover:bg-orange-50'
                                     }`}
                             >
@@ -136,9 +134,9 @@ export default function FAQSection() {
                                         onClick={() => toggleFAQ(faq.id)}
                                         className="w-full flex items-center justify-between p-5 text-left hover:bg-orange-50/50 transition-colors"
                                     >
-                                        <span className="font-semibold text-gray-800 pr-4">{faq.question}</span>
+                                        <span className="font-semibold text-primary pr-4">{faq.question}</span>
                                         <ChevronDown
-                                            className={`w-5 h-5 text-orange-500 transition-transform duration-300 flex-shrink-0 ${openId === faq.id ? 'rotate-180' : ''
+                                            className={`w-5 h-5 text-primary transition-transform duration-300 flex-shrink-0 ${openId === faq.id ? 'rotate-180' : ''
                                                 }`}
                                         />
                                     </button>
@@ -164,9 +162,9 @@ export default function FAQSection() {
                                         onClick={() => toggleFAQ(faq.id)}
                                         className="w-full flex items-center justify-between p-5 text-left hover:bg-orange-50/50 transition-colors"
                                     >
-                                        <span className="font-semibold text-gray-800 pr-4">{faq.question}</span>
+                                        <span className="font-semibold text-primary pr-4">{faq.question}</span>
                                         <ChevronDown
-                                            className={`w-5 h-5 text-orange-500 transition-transform duration-300 flex-shrink-0 ${openId === faq.id ? 'rotate-180' : ''
+                                            className={`w-5 h-5 text-primary transition-transform duration-300 flex-shrink-0 ${openId === faq.id ? 'rotate-180' : ''
                                                 }`}
                                         />
                                     </button>
@@ -189,10 +187,10 @@ export default function FAQSection() {
                     <div className="relative rounded-2xl p-8 text-center overflow-hidden bg-gradient-to-r from-orange-50 via-amber-50 to-rose-50 border border-orange-100 group">
                         {/* Premium Background Effects */}
                         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-amber-500/5 to-red-500/5" />
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 via-amber-500 to-red-500" />
+                        <div className="absolute top-0 left-0 w-full h-1 bg-primary" />
 
                         {/* Animated Border */}
-                        <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-orange-500 via-amber-500 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', maskComposite: 'exclude' }} />
+                        <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', maskComposite: 'exclude' }} />
 
                         {/* Decorative Circles */}
                         <div className="absolute -top-20 -left-20 w-64 h-64 bg-gradient-to-br from-orange-200/30 to-amber-200/30 rounded-full blur-3xl" />
@@ -201,14 +199,14 @@ export default function FAQSection() {
                         {/* Floating Icons */}
                         <div className="absolute top-6 left-6 opacity-30 group-hover:opacity-50 transition-opacity duration-500">
                             <div className="relative">
-                                <div className="absolute inset-0 bg-orange-500 rounded-full blur-md animate-ping opacity-20" />
-                                <HelpCircle className="w-8 h-8 text-orange-500 relative" />
+                                <div className="absolute inset-0 bg-primary rounded-full blur-md animate-ping opacity-20" />
+                                <HelpCircle className="w-8 h-8 text-primary relative" />
                             </div>
                         </div>
                         <div className="absolute bottom-6 right-6 opacity-30 group-hover:opacity-50 transition-opacity duration-500">
                             <div className="relative">
-                                <div className="absolute inset-0 bg-amber-500 rounded-full blur-md animate-ping opacity-20" />
-                                <MessageCircle className="w-8 h-8 text-amber-500 relative" />
+                                <div className="absolute inset-0 bg-primary rounded-full blur-md animate-ping opacity-20" />
+                                <MessageCircle className="w-8 h-8 text-primary  relative" />
                             </div>
                         </div>
 
@@ -225,13 +223,13 @@ export default function FAQSection() {
                             {/* Animated Badge */}
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-200 mb-4 group-hover:scale-105 transition-transform duration-300">
                                 <div className="relative">
-                                    <Heart className="w-4 h-4 text-orange-500" />
-                                    <div className="absolute inset-0 bg-orange-500 rounded-full animate-ping opacity-30" />
+                                    <Heart className="w-4 h-4 text-primary" />
+                                    <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-30" />
                                 </div>
-                                <span className="text-orange-700 text-xs font-semibold uppercase tracking-wider">24/7 Support Available</span>
+                                <span className="text-primary text-xs font-semibold uppercase tracking-wider">24/7 Support Available</span>
                             </div>
 
-                            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-600 via-amber-600 to-red-600 bg-clip-text text-transparent mb-3">
+                            <h3 className="text-2xl md:text-3xl font-bold bg-primary bg-clip-text text-transparent mb-3">
                                 Still Have Questions?
                             </h3>
 
@@ -241,13 +239,13 @@ export default function FAQSection() {
 
                             {/* Buttons */}
                             <div className="flex flex-wrap justify-center gap-3">
-                                <button className="group relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-semibold transition-all shadow-md hover:shadow-xl hover:scale-105 overflow-hidden">
-                                    <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                <button className="group relative inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-semibold transition-all shadow-md hover:shadow-xl hover:scale-105 overflow-hidden">
+                                    <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                     <MessageCircle size={18} className="relative z-10 group-hover:rotate-12 transition-transform" />
                                     <span className="relative z-10">Contact Support</span>
                                 </button>
 
-                                <button className="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-orange-200 text-orange-600 rounded-full font-medium transition-all hover:shadow-md hover:scale-105 group">
+                                <button className="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-primary text-primary rounded-full font-medium transition-all hover:shadow-md hover:scale-105 group">
                                     <Mail size={18} className="group-hover:-translate-y-0.5 transition-transform" />
                                     <span>Email Us</span>
                                 </button>

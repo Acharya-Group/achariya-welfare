@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { Calendar, User, Heart, MessageCircle, Share2, BookOpen, ArrowRight, Clock, Tag, TrendingUp, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
+import SubHeading from '../common/SubHeading';
+import Para from '../common/Para';
 
 const blogs = [
     {
@@ -16,7 +18,7 @@ const blogs = [
         category: 'Education',
         tags: ['Girl Child', 'Scholarship', 'Empowerment'],
         icon: '🎓',
-        color: 'from-orange-500 to-red-500',
+        color: 'from-primary to-red-500',
         lightBg: 'bg-orange-50',
         textColor: 'text-orange-700',
     },
@@ -44,7 +46,7 @@ const blogs = [
         category: 'Empowerment',
         tags: ['Women Empowerment', 'SHG', 'Livelihood'],
         icon: '👩‍💼',
-        color: 'from-amber-500 to-orange-500',
+        color: 'from-amber-500 to-primary',
         lightBg: 'bg-amber-50',
         textColor: 'text-amber-700',
     },
@@ -96,16 +98,11 @@ export default function BlogSection() {
 
                 <AnimatedSection className="text-center mb-14">
                     <span className="text-saffron font-semibold text-sm uppercase tracking-widest">Our Blog</span>
-                    <h2 className="font-display text-4xl font-bold mt-2 mb-3">
-                        Latest <span className="gradient-text">  Stories & Updates</span>
-                    </h2>
-                    <p className="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
-                        Insights, impact stories, and updates from our work across communities.
-
-                    </p>
+                    <SubHeading>
+                        Latest Stories & Updates
+                    </SubHeading>
+                    <Para children="Insights, impact stories, and updates from our work across communities." />
                 </AnimatedSection>
-
-
 
                 {/* Blog Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -159,7 +156,7 @@ export default function BlogSection() {
                                         </div>
                                         <span className="text-xs text-gray-500">{blog.author}</span>
                                     </div>
-                                    <button className="text-orange-500 text-sm font-medium hover:text-orange-600 transition-colors flex items-center gap-1 group">
+                                    <button className="text-primary text-sm font-medium hover:text-orange-600 transition-colors flex items-center gap-1 group">
                                         Read More
                                         <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                                     </button>
@@ -174,15 +171,12 @@ export default function BlogSection() {
                     <div className="inline-flex flex-col items-center gap-4">
                         <Link
                             href="/blog"
-                            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all group"
+                            className="inline-flex items-center gap-2 px-8 py-3 bg-blue hover:bg-primary text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all group"
                         >
                             <span>View All Articles</span>
                             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                         </Link>
-                        <div className="flex items-center gap-2 text-xs text-gray-400">
-                            <Heart size={12} className="text-rose-400" />
-                            <span>Join 5,000+ readers who follow our impact stories</span>
-                        </div>
+            
                     </div>
                 </AnimatedSection>
 

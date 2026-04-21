@@ -2,6 +2,8 @@
 'use client';
 import { Target, TrendingUp, Shield, Handshake, Calendar, MapPin, GraduationCap, Building2, ArrowRight } from 'lucide-react';
 import AnimatedSection from '@/components/AnimatedSection';
+import Para from '../common/Para';
+import SubHeading from '../common/SubHeading';
 
 const goals = [
   {
@@ -82,18 +84,15 @@ export default function GoalsSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-      
+
         <AnimatedSection className="text-center mb-14">
           <span className="text-saffron font-semibold text-sm uppercase tracking-widest">Our Goals</span>
-          <h2 className="font-display text-4xl font-bold mt-2 mb-3">
-            Our <span className="gradient-text"> Future Goals</span>
-          </h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
-           Bold, measurable targets that drive every program, partnership, and rupee we raise.
-            Join us in making these ambitious goals a reality.
-          </p>
+          <SubHeading>
+            Our Future Goals
+          </SubHeading>
+          <Para children="Bold, measurable targets that drive every program, partnership, and rupee we raise.
+            Join us in making these ambitious goals a reality." />
         </AnimatedSection>
-
         {/* Progress Bar Section */}
         <AnimatedSection className="mb-16">
           <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
@@ -103,20 +102,20 @@ export default function GoalsSection() {
                 <p className="text-gray-500 text-sm">Working towards transforming 1,00,000 lives</p>
               </div>
               <div className="text-right">
-                <span className="text-2xl font-bold text-orange-600">15%</span>
+                <span className="text-2xl font-bold text-primary">15%</span>
                 <span className="text-gray-400 text-sm ml-1">Completed</span>
               </div>
             </div>
             <div className="h-3 bg-gray-100 rounded-full overflow-hidden mb-6">
               <div
-                className="h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full transition-all duration-1000"
+                className="h-full bg-primary rounded-full transition-all duration-1000"
                 style={{ width: '15%' }}
               />
             </div>
             <div className="flex justify-between">
               {milestones.map((milestone, idx) => (
                 <div key={milestone.phase} className="text-center flex-1">
-                  <div className={`w-3 h-3 rounded-full mx-auto mb-2 ${milestone.achieved ? 'bg-orange-500' : 'bg-gray-300'}`} />
+                  <div className={`w-3 h-3 rounded-full mx-auto mb-2 ${milestone.achieved ? 'bg-primary' : 'bg-gray-300'}`} />
                   <p className="text-xs font-semibold text-gray-700">{milestone.phase}</p>
                   <p className="text-xs text-gray-400">{milestone.title}</p>
                 </div>
@@ -171,13 +170,13 @@ export default function GoalsSection() {
 
         {/* Bottom CTA Section */}
         <AnimatedSection>
-          <div className="bg-gradient-to-r from-orange-500 via-red-500 to-amber-500 rounded-2xl p-8 text-center text-white">
+          <div className="bg-blue rounded-2xl p-8 text-center text-white">
             <h3 className="text-2xl font-bold mb-3">Help Us Achieve These Goals</h3>
             <p className="text-white/90 max-w-lg mx-auto text-sm mb-6">
               Your support brings us closer to every milestone. Together, we can transform more lives.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-orange-600 px-6 py-2.5 rounded-full font-semibold hover:shadow-lg transition-all hover:scale-105 flex items-center gap-2">
+              <button className="bg-white text-primary px-6 py-2.5 rounded-full font-semibold hover:shadow-lg transition-all hover:scale-105 flex items-center gap-2">
                 <Handshake size={18} />
                 Become a Partner
               </button>
