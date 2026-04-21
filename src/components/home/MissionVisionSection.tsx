@@ -86,7 +86,7 @@ export default function MissionVisionSection() {
           {/* Right Side - Trusted Images */}
           <AnimatedSection direction="right" className="relative group">
             {/* Animated gradient border */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-saffron via-crimson to-amber-500 rounded-2xl blur opacity-30 group-hover:opacity-70 transition duration-500" />
+            <div className="absolute -inset-1 bg-primary rounded-2xl blur opacity-30 group-hover:opacity-70 transition duration-500" />
 
             {/* Main image container */}
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
