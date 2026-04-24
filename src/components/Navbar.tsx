@@ -67,6 +67,7 @@ export default function Navbar() {
             <span className="hidden md:inline">•</span>
             <span className="hidden md:inline">📞 +91-90340-40247</span>
             <Sparkles size={14} className="text-yellow-300 animate-pulse" />
+            <span className="hidden md:inline">Reg. No. 14794 (Since 2011)</span>
           </div>
         </div>
 
@@ -79,7 +80,7 @@ export default function Navbar() {
             >
               <div className="relative w-[140px] h-[50px]  md:w-[150px] md:h-[50px] lg:w-[180px] lg:h-[60px] xl:w-[200px] xl:h-[65px] mb-0">
                 <Image
-                  src="/images/welfare-logo.webp"
+                  src="/images/welfare-logo.png"
                   alt="Achariya Annapurna Logo"
                   fill
                   className="object-contain"
