@@ -190,7 +190,7 @@ export default function HeroSection() {
                             <div className="absolute -top-5 -right-5 border  border-amber-100">
                                 <Image height={50}
                                     width={100}
-                                    src="/logo.png"
+                                    src="/images/logo.png"
                                     alt="Achariya Annapurna Logo"
                                     className="object-contain relative z-10"
                                     priority
